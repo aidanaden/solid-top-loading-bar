@@ -20,17 +20,8 @@ import {
   on,
   createMemo,
 } from "solid-js";
-// import {
-//   CSSProperties,
-//   useEffect,
-//   useState,
-//   forwardRef,
-//   useImperativeHandle,
-//   useRef,
-// } from "react";
 import { useInterval } from "./useInterval";
 import { randomInt } from "./utils";
-// import { randomInt } from "./utils";
 
 type IProps = {
   progress?: number;
