@@ -1,6 +1,6 @@
 {
   "name": "solid-top-loading-bar",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "description": "A very simple, highly customisable solidjs top loader component, ported from react-top-loading-bar",
   "author": {
     "name": "Aidan Aden",
@@ -11,8 +11,10 @@
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
+  "sideEffects": false,
   "engines": {
-    "node": ">=10"
+    "node": ">=10",
+    "yarn": ">=1.22.5"
   },
   "files": [
     "dist"
@@ -31,6 +33,9 @@
     "vite-plugin-solid": "^2.2.6"
   },
   "dependencies": {
+    "solid-js": "^1.4.2"
+  },
+  "peerDependencies": {
     "solid-js": "^1.4.2"
   },
   "keywords": [
