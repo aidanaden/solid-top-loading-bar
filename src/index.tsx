@@ -267,21 +267,35 @@ const LoadingBar: Component<Props> = (_props) => {
     console.log("continuous active change: ", continuousActive());
   });
 
-  createEffect(
-    on(continuousActive, (active) =>
-      useInterval(
-        () => {
-          const random = randomInt(10, 20);
+  createEffect(() => {
+    useInterval(
+      () => {
+        const random = randomInt(10, 20);
 
-          if (localProgress() + random < 90) {
-            setLocalProgress(localProgress() + random);
-            checkIfFull(localProgress() + random);
-          }
-        },
-        active ? continuousRefreshRate() : null
-      )
-    )
-  );
+        if (localProgress() + random < 90) {
+          setLocalProgress(localProgress() + random);
+          checkIfFull(localProgress() + random);
+        }
+      },
+      continuousActive() ? continuousRefreshRate() : null
+    );
+  });
+
+  // createEffect(
+  //   on(continuousActive, (active) =>
+  //     useInterval(
+  //       () => {
+  //         const random = randomInt(10, 20);
+
+  //         if (localProgress() + random < 90) {
+  //           setLocalProgress(localProgress() + random);
+  //           checkIfFull(localProgress() + random);
+  //         }
+  //       },
+  //       active ? continuousRefreshRate() : null
+  //     )
+  //   )
+  // );
 
   return (
     <div
