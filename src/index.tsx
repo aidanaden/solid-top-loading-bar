@@ -272,12 +272,13 @@ const LoadingBar: Component<Props> = (_props) => {
       () => {
         const random = randomInt(10, 20);
 
-        if (localProgress() + random < 90) {
-          setLocalProgress(localProgress() + random);
-          checkIfFull(localProgress() + random);
-        }
+        // if (localProgress() + random < 90) {
+        //   setLocalProgress(localProgress() + random);
+        //   checkIfFull(localProgress() + random);
+        // }
       },
-      continuousActive() ? continuousRefreshRate() : null
+      // continuousActive() ? continuousRefreshRate() : null
+      5000
     );
   });
 
