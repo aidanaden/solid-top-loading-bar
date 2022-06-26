@@ -1,7 +1,8 @@
 {
-  "name": "vite-template-solid",
-  "version": "0.0.0",
-  "description": "",
+  "name": "solid-top-loading-bar-example",
+  "version": "0.1.0",
+  "homepage": "https://github.com/aidanaden/solid-top-loading-bar",
+  "private": true,
   "scripts": {
     "start": "vite",
     "dev": "vite",

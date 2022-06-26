@@ -1,13 +1,25 @@
 {
-  "name": "vite-template-solid",
-  "version": "0.0.0",
-  "description": "",
+  "name": "solid-top-loading-bar",
+  "version": "0.1.0",
+  "description": "A very simple, highly customisable solidjs top loader component, ported from react-top-loading-bar",
+  "author": {
+    "name": "Aidan Aden",
+    "email": "vroomvroom@mailbox.org",
+    "url": "https://github.com/aidanaden"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.tsx",
+  "unpkg": "dist/index.umd.js",
+  "engines": {
+    "node": ">=10"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
   },
-  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
@@ -17,5 +29,32 @@
   },
   "dependencies": {
     "solid-js": "^1.4.2"
+  },
+  "keywords": [
+    "solidjs component",
+    "solid-loading",
+    "solid-loader",
+    "animated loader",
+    "solidjs youtube like loader",
+    "solidjs",
+    "animated solidjs loader",
+    "solid-animated-loader",
+    "solid-top-loader",
+    "solid",
+    "solid-component",
+    "loading-bar",
+    "youtube-loading-bar",
+    "loading",
+    "solid-loading-bar",
+    "loading bar",
+    "smooth",
+    "animated",
+    "youtube loading bar",
+    "top loading bar",
+    "component"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aidanaden/solid-top-loading-bar.git"
   }
 }
