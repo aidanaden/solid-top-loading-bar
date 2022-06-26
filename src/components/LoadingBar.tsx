@@ -10,8 +10,8 @@ import {
   on,
   createMemo,
 } from "solid-js";
-import { useInterval } from "../utils/useInterval";
-import { randomInt } from "../utils/random";
+import useInterval from "../utils/useInterval";
+import randomInt from "../utils/random";
 
 type IProps = {
   progress?: number;
