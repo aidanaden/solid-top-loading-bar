@@ -10,8 +10,8 @@ import {
   on,
   createMemo,
 } from "solid-js";
-import { useInterval } from "./useInterval";
-import { randomInt } from "./utils";
+import { useInterval } from "../utils/useInterval";
+import { randomInt } from "../utils/random";
 
 type IProps = {
   progress?: number;
@@ -263,39 +263,21 @@ const LoadingBar: Component<Props> = (_props) => {
     }
   };
 
-  createEffect(() => {
-    console.log("continuous active change: ", continuousActive());
-  });
+  createEffect(
+    on(continuousActive, (active) =>
+      useInterval(
+        () => {
+          const random = randomInt(10, 20);
 
-  // createEffect(() => {
-  // useInterval(
-  //   () => {
-  // const random = randomInt(10, 20);
-  // if (localProgress() + random < 90) {
-  //   setLocalProgress(localProgress() + random);
-  //   checkIfFull(localProgress() + random);
-  // }
-  //   },
-  //   // continuousActive() ? continuousRefreshRate() : null
-  //   5000
-  // );
-  // });
-
-  // createEffect(
-  //   on(continuousActive, (active) =>
-  //     useInterval(
-  //       () => {
-  //         const random = randomInt(10, 20);
-
-  //         if (localProgress() + random < 90) {
-  //           setLocalProgress(localProgress() + random);
-  //           checkIfFull(localProgress() + random);
-  //         }
-  //       },
-  //       active ? continuousRefreshRate() : null
-  //     )
-  //   )
-  // );
+          if (localProgress() + random < 90) {
+            setLocalProgress(localProgress() + random);
+            checkIfFull(localProgress() + random);
+          }
+        },
+        active ? continuousRefreshRate() : null
+      )
+    )
+  );
 
   return (
     <div

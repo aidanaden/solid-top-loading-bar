@@ -17,6 +17,6 @@
   },
   "dependencies": {
     "solid-js": "^1.4.2",
-    "solid-top-loading-bar": "^0.2.11"
+    "solid-top-loading-bar": "^0.2.12"
   }
 }
