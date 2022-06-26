@@ -70,11 +70,8 @@ const LoadingBar: Component<Props> = (_props) => {
     refreshRate: number;
   }>({ active: false, startingValue: 20, refreshRate: 1000 });
   const [usingProps, setUsingProps] = createSignal(false);
-  const continuousActive = createMemo(() => pressedContinuous().active);
-  const continuousRefreshRate = createMemo(
-    () => pressedContinuous().refreshRate
-  );
-
+  const continuousActive = () => pressedContinuous().active;
+  const continuousRefreshRate = () => pressedContinuous().refreshRate;
   const [pressedStaticStart, setStaticStartPressed] = createSignal<{
     active: boolean;
     value: number;
