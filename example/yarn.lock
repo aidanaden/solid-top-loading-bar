@@ -673,10 +673,10 @@ solid-refresh@^0.4.0:
     "@babel/helper-module-imports" "^7.16.7"
     "@babel/types" "^7.18.4"
 
-solid-top-loading-bar@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/solid-top-loading-bar/-/solid-top-loading-bar-0.2.2.tgz#92fe59b33361d91e1baf4e574912c3f54a74656c"
-  integrity sha512-AUH1w0C8QVIf2JFmfBe+ixn4N8X39JLrJdl/YmTCg8VmYczAgpzONtSp4cCFnBbQTJKWVVYB76wAliy7TPq/iw==
+solid-top-loading-bar@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/solid-top-loading-bar/-/solid-top-loading-bar-0.2.3.tgz#006cd0ea604d88a6a5d1797c2ae7f301553a821a"
+  integrity sha512-vGURYl8lhd3Vl0KnDgfuDE5ChNINb3SZNzwBr/U9lAcs8rOE+PJ4vpXVDKBHLXb4Cj7lm9/fRQ8U5bh9R+7ELg==
   dependencies:
     solid-js "^1.4.2"
 

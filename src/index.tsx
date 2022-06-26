@@ -263,6 +263,10 @@ const LoadingBar: Component<Props> = (_props) => {
     }
   };
 
+  createEffect(() => {
+    console.log("continuous active change: ", continuousActive());
+  });
+
   createEffect(
     on(continuousActive, (active) =>
       useInterval(
