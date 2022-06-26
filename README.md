@@ -87,7 +87,7 @@ export default App;
 
 ## Demo
 
-[Click here for demo](https://klendi.github.io/solid-top-loading-bar/)
+IN PROGRESS
 
 ## Built-in Methods
 
