@@ -1,6 +1,6 @@
 {
   "name": "solid-top-loading-bar",
-  "version": "0.2.17",
+  "version": "0.2.18",
   "description": "A very simple, highly customisable solidjs top loader component, ported from react-top-loading-bar",
   "author": {
     "name": "Aidan Aden",
@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "type": "module",
-  "source": "src/index.ts",
+  "source": "src/index.tsx",
   "main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
