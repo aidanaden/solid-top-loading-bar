@@ -9,14 +9,13 @@
   },
   "license": "MIT",
   "type": "module",
-  "source": "src/index.ts",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "main": "dist/esm/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
   "exports": {
     ".": {
-      "solid": "./dist/index.js",
-      "default": "./dist/index.js"
+      "solid": "./dist/source/index.jsx",
+      "default": "./dist/esm/index.js"
     }
   },
   "sideEffects": false,
@@ -28,14 +27,16 @@
     "dist"
   ],
   "scripts": {
-    "dev": "microbundle watch",
-    "build": "microbundle",
+    "dev": "cd example && vite",
+    "build": "rollup -c",
+    "prepublishOnly": "yarn build",
     "serve": "vite preview"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
-    "microbundle": "^0.15.0",
     "postcss": "^8.4.14",
+    "rollup": "^2.75.7",
+    "rollup-preset-solid": "^1.4.0",
     "typescript": "^4.6.4",
     "vite": "^2.9.9",
     "vite-plugin-solid": "^2.2.6"
