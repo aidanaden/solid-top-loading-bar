@@ -87,7 +87,7 @@ export default App;
 
 ## Demo
 
-IN PROGRESS
+[Click here for demo](https://solid-top-loading-bar.vercel.app/)
 
 ## Built-in Methods
 
