@@ -10,6 +10,8 @@
 
 [![solid-top-loading-bar](https://nodei.co/npm/solid-top-loading-bar.png)](https://npmjs.org/package/solid-top-loading-bar)
 
+This package was ported to Solid from the [react-top-loading-bar](https://github.com/klendi/react-top-loading-bar) package made by [Klendi Gocci](https://klendi.dev/)
+
 ## Install
 
 - using npm
