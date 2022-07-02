@@ -2,11 +2,9 @@
 
 >
 
-[![NPM](https://img.shields.io/npm/v/solid-top-loading-bar.svg)](https://www.npmjs.com/package/solid-top-loading-bar)
 [![size](https://img.shields.io/bundlephobia/minzip/solid-top-loading-bar?style=for-the-badge)](https://bundlephobia.com/package/solid-top-loading-bar)
 [![size](https://img.shields.io/npm/v/solid-top-loading-bar?style=for-the-badge)](https://www.npmjs.com/package/solid-top-loading-bar)
 ![npm](https://img.shields.io/npm/dw/solid-top-loading-bar?style=for-the-badge)
-[![npm download][download-image]][download-url]
 
 [download-image]: https://img.shields.io/npm/dm/solid-top-loading-bar.svg
 [download-url]: https://npmjs.org/package/solid-top-loading-bar
