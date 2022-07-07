@@ -115,52 +115,54 @@ const LoadingBar: Component<Props> = (_props) => {
     });
   });
 
-  props.setLoadingBar?.({
-    continuousStart(startingValue?: number, refreshRate: number = 1000) {
-      if (pressedStaticStart().active) return;
-      if (usingProps()) {
-        console.warn(
-          "react-top-loading-bar: You can't use both controlling by props and ref methods to control the bar!"
-        );
-        return;
-      }
-      const val = startingValue || randomInt(10, 20);
-      const pressedContinuosValue = {
-        active: true,
-        refreshRate,
-        startingValue,
-      };
-      setPressedContinuous(pressedContinuosValue);
-      setLocalProgress(val);
-      checkIfFull(val);
-    },
-    staticStart(startingValue?: number) {
-      if (pressedContinuous().active) return;
-      if (usingProps()) {
-        console.warn(
-          "react-top-loading-bar: You can't use both controlling by props and ref methods to control the bar!"
-        );
-        return;
-      }
-      const val = startingValue || randomInt(30, 50);
-      setStaticStartPressed({
-        active: true,
-        value: val,
-      });
-      setLocalProgress(val);
-      checkIfFull(val);
-    },
-    complete() {
-      if (usingProps()) {
-        console.warn(
-          "react-top-loading-bar: You can't use both controlling by props and ref methods to control the bar!"
-        );
-        return;
-      }
-      setLocalProgress(100);
-      checkIfFull(100);
-    },
-  });
+  if (props.setLoadingBar) {
+    props.setLoadingBar({
+      continuousStart(startingValue?: number, refreshRate: number = 1000) {
+        if (pressedStaticStart().active) return;
+        if (usingProps()) {
+          console.warn(
+            "react-top-loading-bar: You can't use both controlling by props and ref methods to control the bar!"
+          );
+          return;
+        }
+        const val = startingValue || randomInt(10, 20);
+        const pressedContinuosValue = {
+          active: true,
+          refreshRate,
+          startingValue,
+        };
+        setPressedContinuous(pressedContinuosValue);
+        setLocalProgress(val);
+        checkIfFull(val);
+      },
+      staticStart(startingValue?: number) {
+        if (pressedContinuous().active) return;
+        if (usingProps()) {
+          console.warn(
+            "react-top-loading-bar: You can't use both controlling by props and ref methods to control the bar!"
+          );
+          return;
+        }
+        const val = startingValue || randomInt(30, 50);
+        setStaticStartPressed({
+          active: true,
+          value: val,
+        });
+        setLocalProgress(val);
+        checkIfFull(val);
+      },
+      complete() {
+        if (usingProps()) {
+          console.warn(
+            "react-top-loading-bar: You can't use both controlling by props and ref methods to control the bar!"
+          );
+          return;
+        }
+        setLocalProgress(100);
+        checkIfFull(100);
+      },
+    });
+  }
 
   createEffect(
     on(color, (color) => {

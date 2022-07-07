@@ -1,6 +1,6 @@
 {
   "name": "solid-top-loading-bar",
-  "version": "0.2.24",
+  "version": "0.2.25",
   "description": "A very simple, highly customisable solidjs top loader component, ported from react-top-loading-bar",
   "author": {
     "name": "Aidan Aden",
