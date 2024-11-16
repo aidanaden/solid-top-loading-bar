@@ -1,6 +1,7 @@
 import { createEffect, createSignal, Show } from "solid-js";
 
 import LoadingBar, { LoadingBarRef } from "solid-top-loading-bar";
+
 import "./index.css";
 import { changeColor } from "./changeColor";
 

@@ -1,77 +1,87 @@
 {
   "name": "solid-top-loading-bar",
-  "version": "0.3.1",
-  "description": "A very simple, highly customisable solidjs top loader component, ported from react-top-loading-bar",
-  "author": {
-    "name": "Aidan Aden",
-    "email": "vroomvroom@mailbox.org",
-    "url": "https://github.com/aidanaden"
-  },
+  "version": "0.5.0",
+  "description": "{{desc_of_lib}}",
   "license": "MIT",
-  "type": "module",
-  "source": "src/index.tsx",
-  "main": "dist/esm/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
-  "exports": {
-    ".": {
-      "solid": "./dist/source/index.jsx",
-      "default": "./dist/esm/index.js",
-      "import": "./dist/esm/index.js"
-    }
+  "author": "aidanaden",
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aidanaden/solid-top-loading-bar.git"
   },
-  "sideEffects": false,
-  "engines": {
-    "node": ">=10",
-    "yarn": ">=1.22.5"
+  "homepage": "https://github.com/aidanaden/solid-top-loading-bar#readme",
+  "bugs": {
+    "url": "https://github.com/aidanaden/solid-top-loading-bar/issues"
   },
   "files": [
     "dist"
   ],
+  "private": false,
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "browser": {},
+  "exports": {
+    "solid": {
+      "development": "./dist/dev.jsx",
+      "import": "./dist/index.jsx"
+    },
+    "development": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/dev.js"
+      }
+    },
+    "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "typesVersions": {},
   "scripts": {
-    "dev": "cd example && vite",
-    "build": "rollup -c",
-    "prepublishOnly": "yarn build",
-    "serve": "vite preview"
-  },
-  "devDependencies": {
-    "rollup": "^2.78.1",
-    "rollup-preset-solid": "^1.4.0",
-    "typescript": "^4.7.4",
-    "vite": "^3.0.9",
-    "vite-plugin-solid": "^2.3.0"
-  },
-  "dependencies": {
-    "solid-js": "^1.4.8"
+    "dev": "vite serve dev",
+    "build": "tsup",
+    "prepublishOnly": "pnpm build",
+    "format": "prettier --ignore-path .gitignore -w \"src/**/*.{js,ts,json,css,tsx,jsx}\" \"dev/**/*.{js,ts,json,css,tsx,jsx}\"",
+    "lint": "concurrently pnpm:lint:*",
+    "lint:code": "eslint --ignore-path .gitignore --max-warnings 0 src/**/*.{js,ts,tsx,jsx}",
+    "lint:types": "tsc --noEmit",
+    "update-deps": "pnpm up -Li",
+    "changeset": "changeset",
+    "version": "changeset version && pnpm i",
+    "ci:version": "changeset version && pnpm i --no-frozen-lockfile && git add .",
+    "release": "pnpm build && changeset publish"
   },
   "peerDependencies": {
-    "solid-js": "^1.4.8"
+    "solid-js": "^1.9.3"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.9",
+    "@types/node": "^20.12.12",
+    "@typescript-eslint/eslint-plugin": "^8.14.0",
+    "@typescript-eslint/parser": "^8.14.0",
+    "concurrently": "^9.1.0",
+    "esbuild": "^0.24.0",
+    "esbuild-plugin-solid": "^0.6.0",
+    "eslint": "^9.15.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-no-only-tests": "^3.3.0",
+    "prettier": "3.3.3",
+    "solid-js": "^1.9.3",
+    "tsup": "^8.3.5",
+    "tsup-preset-solid": "^2.2.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vite-plugin-solid": "^2.10.2"
   },
   "keywords": [
-    "solidjs component",
-    "solid-loading",
-    "solid-loader",
-    "animated loader",
-    "solidjs youtube like loader",
-    "solidjs",
-    "animated solidjs loader",
-    "solid-animated-loader",
-    "solid-top-loader",
-    "solid",
-    "solid-component",
-    "loading-bar",
-    "youtube-loading-bar",
-    "loading",
-    "solid-loading-bar",
-    "loading bar",
-    "smooth",
-    "animated",
-    "youtube loading bar",
-    "top loading bar",
-    "component"
+    "solid"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/aidanaden/solid-top-loading-bar.git"
+  "packageManager": "pnpm@9.1.1",
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=9.0.0"
   }
 }
