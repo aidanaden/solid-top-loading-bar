@@ -1,7 +1,7 @@
 {
   "name": "solid-top-loading-bar",
   "version": "0.5.0",
-  "description": "{{desc_of_lib}}",
+  "description": "A very simple, highly customisable solidjs top loader component, partially inspired by react-top-loading-bar",
   "license": "MIT",
   "author": "aidanaden",
   "contributors": [],
@@ -77,7 +77,27 @@
     "vite-plugin-solid": "^2.10.2"
   },
   "keywords": [
-    "solid"
+    "solidjs component",
+    "solid-loading",
+    "solid-loader",
+    "animated loader",
+    "solidjs youtube like loader",
+    "solidjs",
+    "animated solidjs loader",
+    "solid-animated-loader",
+    "solid-top-loader",
+    "solid",
+    "solid-component",
+    "loading-bar",
+    "youtube-loading-bar",
+    "loading",
+    "solid-loading-bar",
+    "loading bar",
+    "smooth",
+    "animated",
+    "youtube loading bar",
+    "top loading bar",
+    "component"
   ],
   "packageManager": "pnpm@9.1.1",
   "engines": {
